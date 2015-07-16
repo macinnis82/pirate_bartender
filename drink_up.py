@@ -77,8 +77,8 @@ if __name__ == '__main__':
 	#print answers
 	drink = make_drink(answers)
 	#print drink
-	print "Your drink contains the following:"
+	print "Drink up ... your drink contains the following ingredients:"
 	for things in drink:
-	    print 'A ' + drink['{}'.format(things)]
+		print 'A ' + drink['{}'.format(things)]
 	
     
