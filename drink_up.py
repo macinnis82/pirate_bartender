@@ -16,6 +16,9 @@ ingredients = {
     "fruity": ["slice of orange", "dash of cassis", "cherry on top"]
 }
 
+adjectives = [ "Admirable", "Beloved", "Definitive", "Klutzy", "Rusty" ]
+nouns = [ "Flower", "Beast", "Kiss", "Volcano", "Dock" ]
+
 def drink_choice():
     cust_drink = {}
     print "Please answer yes or no to the following questions:"
@@ -72,6 +75,10 @@ def make_drink(preferences):
         
     return drink
     
+def drink_name():
+    name = random.choice(adjectives) +" "+ random.choice(nouns)
+    return name
+    
 if __name__ == '__main__':
 	answers = drink_choice()
 	#print answers
@@ -80,5 +87,6 @@ if __name__ == '__main__':
 	print "Drink up ... your drink contains the following ingredients:"
 	for things in drink:
 		print 'A ' + drink['{}'.format(things)]
+	print "Your drink will be called {}!".format(drink_name())
 	
     
