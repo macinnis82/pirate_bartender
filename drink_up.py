@@ -34,25 +34,25 @@ def drink_choice():
         cust_drink['salty'] = True
     else:
         cust_drink['salty'] = False
-    
+        
     bitter = raw_input(questions['bitter'])
     if bitter[0] == 'y' or bitter[0] == 'Y':
         cust_drink['bitter'] = True
     else:
         cust_drink['bitter'] = False
-        
+            
     sweet = raw_input(questions['sweet'])
     if sweet[0] == 'y' or sweet[0] == 'Y':
         cust_drink['sweet'] = True
     else:
         cust_drink['sweet'] = False
-    
+        
     fruity = raw_input(questions['fruity'])
     if fruity[0] == 'y' or fruity[0] == 'Y':
         cust_drink['fruity'] = True
     else:
         cust_drink['fruity'] = False
-        
+
     return cust_drink
     
 def make_drink(preferences):
@@ -80,13 +80,16 @@ def drink_name():
     return name
     
 if __name__ == '__main__':
-	answers = drink_choice()
-	#print answers
-	drink = make_drink(answers)
-	#print drink
-	print "Drink up ... your drink contains the following ingredients:"
-	for things in drink:
-		print 'A ' + drink['{}'.format(things)]
-	print "Your drink will be called {}!".format(drink_name())
-	
+    answers = drink_choice()
+    drink = make_drink(answers)
+    print "Your drink will be called {}!".format(drink_name())
+    print "It contains the following ingredients:"
+    for things in drink:
+        print '  - ' + drink['{}'.format(things)]
     
+    
+#    another = raw_input("Would you like another drink?")
+#    if another[0] == 'Y' or another == 'y':
+#        drinking = True
+#    else:
+#        drinking = False
