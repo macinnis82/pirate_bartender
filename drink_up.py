@@ -86,10 +86,3 @@ if __name__ == '__main__':
     print "It contains the following ingredients:"
     for things in drink:
         print '  - ' + drink['{}'.format(things)]
-    
-    
-#    another = raw_input("Would you like another drink?")
-#    if another[0] == 'Y' or another == 'y':
-#        drinking = True
-#    else:
-#        drinking = False
